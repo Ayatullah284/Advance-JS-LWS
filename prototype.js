@@ -14,7 +14,7 @@ person.sleep = function(){
 } */
 
 
-const personMethods = {
+/* const personMethods = {
     eat(){
         console.log(`Person is eating`)
     },
@@ -41,4 +41,17 @@ function Person(name, age){
 }
 
 const sakib = Person("sakib", 35);
-const tamim = person("Tamim", 35);
+const tamim = person("Tamim", 35); */
+
+
+const captain = {
+    name: "Mashrafi",
+    age: 36,
+    country: "Bangladesh"
+};
+
+const player = Object.create(captain);
+
+
+console.log(player)
+console.log(player.name)
