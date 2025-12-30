@@ -37,6 +37,7 @@ console.dir(account) */
 
 
 // enclosing scopes 
+/*
 (function(){
     var nam1 = 2;
     var jog = function(){
@@ -45,7 +46,7 @@ console.dir(account) */
 };
 
 console.dir(jog)
-})()
+})() */
 
 /*
 📌 Shortcut মনে রাখার নিয়ম
@@ -56,5 +57,142 @@ console.dir(jog)
 🔥 One-line definition
 
 Enclosing scope = nearest outer scope of a function */
+
+
+
+/*
+(function (){
+    var num1 = 1;
+    var num2 = 2;
+
+    var sum = function(){
+        return num1 + num2;
+    };
+
+    console.log(sum())
+    console.dir(sum)
+
+
+    num1 = 6;
+    num2 = 7;
+
+    console.log(sum());
+    console.dir(sum);
+})(); */
+
+
+
+
+
+
+
+
+
+
+/*
+let num1 = 1;
+let num2 = 2;
+
+var sum = function(){
+    return num1 + num2;
+};
+
+console.log(sum())
+console.dir(sum) */
+
+
+
+/*
+(function(){
+    let num1 = 1;
+    let num2 = 2;
+
+    var sum = function(){
+        return num1 + num2;
+};
+
+    console.log(sum())
+    console.dir(sum)
+})(); */
+
+
+
+
+/*
+function stopWatch(){
+    var startTime = Date.now();
+
+    return function getDelay(){
+        console.log(Date.now() - startTime)
+    }
+};
+
+
+var timer = stopWatch();
+
+
+for(var i = 0; i<1000; i++){
+    var a = Math.random() * 10000;
+}
+
+
+
+timer()
+console.dir(timer)
+
+timer = null;  */
+
+
+
+/*
+var a;
+function async(){
+
+    a = 20;
+    var myFunc = ()=>{
+        console.log(a);
+    }
+    setTimeout(myFunc, 3000)
+
+    console.dir(myFunc)
+}
+
+async();
+a = 30;
+
+*/
+
+
+/*
+function apiFunction(url){
+    fetch(url)
+        .then(res => {
+            console.log(res) 
+        })
+}
+
+
+apiFunction('https://jsonplaceholder.typicode.com/todos/1')
+
+
+console.log('I am here')  */
+
+
+
+
+for(let i=0; i<3; i++){ 
+
+    const myFunc = ()=>{
+        console.log(i)
+    }
+
+    console.log(i)
+    console.dir(myFunc)
+    setTimeout(myFunc, 3000)
+        
+}
+
+
+console.log(`after for loop`)
 
 
