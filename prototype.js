@@ -18,7 +18,13 @@ person.sleep = function(){
 
 
 
-function Person(name, age){
+
+
+
+
+
+
+/* function Person(name, age){
     // let this = Object.create(PersonWithNew.prototype);
     this.name = name;
     this.age = age;
@@ -47,7 +53,14 @@ Person.prototype = {
 
 const sakib = new Person("sakib", 35);
 sakib.play();
-const tamim = new Person("Tamim", 35);
+const tamim = new Person("Tamim", 35); */
+
+
+
+
+
+
+
 
 
 
@@ -68,3 +81,35 @@ console.log(player.name) */
 function test(){};
 
 console.dir(test.prototype) */
+
+
+
+
+
+
+
+
+class Person{
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+
+    eat(){
+        console.log(`Person is eating`);
+    }
+
+    sleep(){
+        console.log(`Person is sleeping`);
+    }
+
+    play(){
+        console.log(`Person is playing`);
+    }
+}
+
+
+const sakib = new Person('Sakib', 35);
+const tamim = new Person('Tamim', 35);
+
+sakib.play();
