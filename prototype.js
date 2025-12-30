@@ -89,7 +89,7 @@ console.dir(test.prototype) */
 
 
 
-class Person{
+/* class Person{
     constructor(name, age){
         this.name = name;
         this.age = age;
@@ -112,4 +112,27 @@ class Person{
 const sakib = new Person('Sakib', 35);
 const tamim = new Person('Tamim', 35);
 
-sakib.play();
+sakib.play(); */
+
+
+
+
+
+
+
+
+
+
+
+
+// let persons = [];
+
+let persons = new Array();
+
+
+persons.push('Sakib');
+
+
+console.log(Array.prototype);  //Array is parent
+console.log(persons); //persons is child
+
