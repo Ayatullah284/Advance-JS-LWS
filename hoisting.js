@@ -33,9 +33,19 @@ console.log(`I love ${getLanguage()}`) */
 
 
 
-
+/*
 myFunc();
 function myFunc(){
     console.log(`I love JavaScript!`);
+}
+*/
+
+
+
+myFunc();
+
+const myFunc = function(){
+    var language = "JavaScript";
+    console.log(language)
 }
 
