@@ -14,7 +14,19 @@ person.sleep = function(){
 } */
 
 
-/* const personMethods = {
+
+
+
+
+function Person(name, age){
+    // let this = Object.create(PersonWithNew.prototype);
+    this.name = name;
+    this.age = age;
+
+    // return this;
+}
+
+Person.prototype = {
     eat(){
         console.log(`Person is eating`)
     },
@@ -26,25 +38,20 @@ person.sleep = function(){
     }
 }
 
+// const sakib = Person("sakib", 35);
+// sakib.play()
+// const tamim = Person("Tamim", 35);
+// console.dir(Person)
+// const sakib = new Person("sakib", 35);
+// const tamim = new Person("Tamim", 35);
 
-function Person(name, age){
-    let person = {};
-
-    person.name = name;
-    person.age = age;
-
-    person.eat = personMethods.eat;
-    person.sleep = personMethods.eat;
-    person.play = personMethods.play;
-
-    return person;
-}
-
-const sakib = Person("sakib", 35);
-const tamim = person("Tamim", 35); */
+const sakib = new Person("sakib", 35);
+sakib.play();
+const tamim = new Person("Tamim", 35);
 
 
-const captain = {
+
+/* const captain = {
     name: "Mashrafi",
     age: 36,
     country: "Bangladesh"
@@ -54,4 +61,10 @@ const player = Object.create(captain);
 
 
 console.log(player)
-console.log(player.name)
+console.log(player.name) */
+
+
+/* 
+function test(){};
+
+console.dir(test.prototype) */
