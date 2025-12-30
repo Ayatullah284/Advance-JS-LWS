@@ -15,7 +15,7 @@ var a = "Bangladesh"; */
 
 
 
-
+/*
 let LANGUAGE = 'Java';
 let language = 'JavaScript';
 
@@ -29,4 +29,13 @@ function getLanguage(){
 }
 
 
-console.log(`I love ${getLanguage()}`)
+console.log(`I love ${getLanguage()}`) */
+
+
+
+
+myFunc();
+function myFunc(){
+    console.log(`I love JavaScript!`);
+}
+
