@@ -54,7 +54,7 @@ console.log(sakib.eat())
  */
 
 
-class Person {
+/* class Person {
     constructor(name, age){
         this.name = name;
         this.age = age;
@@ -83,8 +83,37 @@ class Cricketer extends Person {
 let sakib = new Cricketer('Sakib', 35, 'All-Rounder', 'Bangladesh')
 sakib.eat()
 sakib.play()
+ */
 
 
 
 
 
+
+class Person {
+    constructor(name, age){
+        this.name = name; //property
+        this.age = age;
+    }
+
+    eat(){  //method
+        console.log(`${this.name} is eating`)
+    }
+
+    get setName(){ //getter
+        return this.name;
+    }
+
+    set setName(name){ //setter
+        this.name = name;
+    }
+}
+
+
+
+
+let sakib = new Person('Sakib', 35);
+console.log(sakib.setName)
+
+sakib.setName = 'Ayatullah'
+console.log(sakib.name);
