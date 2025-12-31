@@ -1,23 +1,17 @@
-function Person(name, age){
-    this.name = name;
-    this.age = age;
+var f = function Person(){}
 
+
+
+console.dir(f);
+
+Object.prototype.Ayatullah = function(){
+    console.log('I am Ayatullah.')
 }
 
 
-Person.prototype = {
-
-    eat: function(){
-        console.log(`${this.name} is eating`)
-    }
-}
-
-const sakib = new Person('Sakib', 35);
-console.log(sakib)
-
-const tamim = new Person('tamim', 36);
-console.log(tamim)
+var p = {};
 
 
+p.Ayatullah();
 
 
