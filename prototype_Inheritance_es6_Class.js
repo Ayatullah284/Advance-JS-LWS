@@ -126,7 +126,7 @@ console.log(sakib.name); */
 
 
 
-
+/* 
  class Person {
     constructor(name, age){
         this.name = name; //property
@@ -155,4 +155,46 @@ let tamim = new Person('Tamim', 34);
 let ans = Person.isEqualAge(sakib, tamim);
 console.log(ans)
 
+ */
 
+
+
+
+
+
+
+
+// Polymorphisom = parent er data apdate 
+
+ class Person {
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+
+    play(){
+        console.log(`${this.name} is playing`)
+    }
+}
+
+class Cricketer extends Person {
+    constructor(name, age, type, country){
+        super(name, age)
+        this.name = name;
+        this.age = age;
+        this.type = type;
+        this.country = country;
+    }
+
+    play(){
+        super.play()
+        console.log(`${this.name} is playing cricket.`)
+    }
+}
+
+
+let sakib = new Cricketer('Sakib', 35, 'All-Rounder', 'Bangladesh')
+
+
+
+sakib.play()
