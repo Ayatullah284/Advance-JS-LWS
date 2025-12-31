@@ -90,7 +90,7 @@ sakib.play()
 
 
 
-class Person {
+/* class Person {
     constructor(name, age){
         this.name = name; //property
         this.age = age;
@@ -116,4 +116,41 @@ let sakib = new Person('Sakib', 35);
 console.log(sakib.setName)
 
 sakib.setName = 'Ayatullah'
-console.log(sakib.name);
+console.log(sakib.name); */
+
+
+
+
+
+
+
+
+
+
+ class Person {
+    constructor(name, age){
+        this.name = name; //property
+        this.age = age;
+    }
+
+    eat(){  //method
+        console.log(`${this.name} is eating`)
+    }
+
+    static isEqualAge(person1, person2){
+        let result = person1.age === person2.age;
+        return result;
+    }
+}
+
+
+
+
+let sakib = new Person('Sakib', 35);
+let tamim = new Person('Tamim', 34);
+
+
+
+
+let ans = Person.isEqualAge(sakib, tamim);
+console.log(ans)
