@@ -154,3 +154,5 @@ let tamim = new Person('Tamim', 34);
 
 let ans = Person.isEqualAge(sakib, tamim);
 console.log(ans)
+
+
