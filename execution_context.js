@@ -140,4 +140,12 @@ scope chain  */
 this: window 
 topic: "JavaScript Execution Context"
 getTopic: fn()
+        //getTopic function Execution Context:
+        phase: Loading/Creation
+        argumente: {}
+        this: window
 scope chain  */
+
+
+
+
