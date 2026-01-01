@@ -304,5 +304,5 @@ var v3 = 'Best Player';
 
 var v = [v1, v2, v3]
 
-printName.apply(sakib, v)
-
+var myFunc = printName.bind(sakib, v)
+myFunc()
