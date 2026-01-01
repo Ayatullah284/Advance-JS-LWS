@@ -106,4 +106,38 @@ It uses both interpretation and compilation.
 * Hoisting + JIT relation
 
 এসবও বাংলায় diagram সহ বুঝিয়ে দিতে পারি 👍
+ */  
+
+
+
+/* 
+Global Execution Context 
+
+phase: loading/creation 
+window: global object 
+this: window 
+variable object 
+scope chain 
+
  */
+
+var topic = "JavaScript Execution Context";
+function getTopic(){
+    return topic;
+}
+getTopic()
+
+// Phase: Loading/Creation 
+/* window: global object 
+this: window 
+topic: undefined 
+getTopic: fn() (address)
+scope chain  */
+
+
+// Phase: Execution 
+/* window: global object
+this: window 
+topic: "JavaScript Execution Context"
+getTopic: fn()
+scope chain  */
