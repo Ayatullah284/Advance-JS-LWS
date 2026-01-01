@@ -302,7 +302,7 @@ var v1 = 'Handsome';
 var v2 = 'All-rounder';
 var v3 = 'Best Player';
 
+var v = [v1, v2, v3]
 
-
-printName.call(sakib, v1, v2, v3)
+printName.apply(sakib, v)
 
