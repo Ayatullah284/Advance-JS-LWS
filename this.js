@@ -289,7 +289,7 @@ sakib.father.printName() */
 
 
 
-var printName = function(v1, v2, v3){
+/* var printName = function(v1, v2, v3){
     console.log(this.name, this);
     console.log(`${this.name} is ${v1}, ${v2}, ${v3}`)
 }
@@ -305,4 +305,22 @@ var v3 = 'Best Player';
 var v = [v1, v2, v3]
 
 var myFunc = printName.bind(sakib, v)
-myFunc()
+myFunc() */
+
+
+
+
+
+
+function Person(name, age){
+    // let this = Object.create(null)
+    this.name = name;
+    this.age = age;
+    console.log(`${this.name} is ${this.age} years old`);
+    console.log(this)
+
+    // return this;
+}
+
+var sakib = new Person('Sakib', 35)
+
