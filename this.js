@@ -312,7 +312,7 @@ myFunc() */
 
 
 
-function Person(name, age){
+/* function Person(name, age){
     // let this = Object.create(null)
     this.name = name;
     this.age = age;
@@ -324,3 +324,22 @@ function Person(name, age){
 
 var sakib = new Person('Sakib', 35)
 
+ */
+
+
+
+
+var printName = function(){
+    console.log(this.name, this);
+    console.log(window === this);
+};
+
+var sakib = {
+    name: 'Sakib',
+};
+
+
+printName();
+
+
+// arraw function er this == window 
