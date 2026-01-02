@@ -105,7 +105,7 @@ console.log('Hello'); */
 
 
 
-    const promise1 = Promise.resolve(`Promise 1 resolved`);
+  /*   const promise1 = Promise.resolve(`Promise 1 resolved`);
 
     const promise2 = new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -125,4 +125,54 @@ console.log('Hello'); */
         .then(res => {
             console.log(res);
 
-        });
+        }); */
+
+
+
+
+
+
+
+
+const hasMeeting = false;
+
+const meeting = new Promise((resolve, reject) => {
+    if(!hasMeeting){
+        const meetingDetails = {
+            name: 'Technical Meeting',
+            location: 'Google Meet',
+            time: '10:00 PM'
+        };
+
+        resolve(meetingDetails);
+    }else{
+
+        reject(new Error('meeting already scheduled!'));
+
+    }
+  })
+
+
+
+const addToCalendar = (meetingDetails) => {
+    const calendar = `${meetingDetails.name} has been scheduled on ${meetingDetails.location} at ${meetingDetails.time}`;
+        return Promise.resolve(calendar);
+    
+  }
+
+
+async function MyMeeting() {
+    try{
+        const meetingDetails = await meeting;
+        const calendar = await addToCalendar(meetingDetails);
+        console.log(calendar) 
+
+    }catch{
+        console.log(`somthing wrong happend.`)
+    }
+    
+}
+
+
+MyMeeting();
+console.log('hello world')
