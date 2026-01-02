@@ -86,7 +86,7 @@ console.log(result) */
 
 
 
-var players = [
+/* var players = [
     {
         name: 'Sakib',
         avg: 38.23
@@ -107,6 +107,28 @@ var players = [
 
 var result = players.filter(player => player.avg < 38);
 
-console.log(result)
+console.log(result) */
+
+
+
+
+const languages = ['JavaScript', 'Python', 'Php', 'C'];
+
+function mapSumit(arr,fun){
+
+    const newArray = [];
+    for(let i=0; i<arr.length; i++){
+        newArray.push(fun(arr[i]))
+    }
+
+    return newArray;
+}
+
+
+const myArray = mapSumit(languages, language => language.length)
+
+
+
+console.log(myArray)
 
 
