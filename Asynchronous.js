@@ -70,16 +70,31 @@ console.log('Hello'); */
         resolve(meetingDetails);
     }else{
 
-        reject(new Error('meeting already ase re pagla'));
+        reject(new Error('meeting already scheduled!'));
 
     }
   })
 
+/*   const addToCalendar = (meetingDetails) => {
+    return new Promise((resolve, reject) => {
+        const calendar = `${meetingDetails.name} has been scheduled on ${meetingDetails.location} at ${meetingDetails.time}`;
+        resolve(calendar);
+    })
+  } */
+  const addToCalendar = (meetingDetails) => {
+        const calendar = `${meetingDetails.name} has been scheduled on ${meetingDetails.location} at ${meetingDetails.time}`;
+        return Promise.resolve(calendar);
+    
+  }
+
 
   meeting
+    .then(addToCalendar)
     .then((res)=>{
         console.log(res);
     })
     .catch((err)=>{
         console.log(err);
     })
+
+    console.log('Hello')
