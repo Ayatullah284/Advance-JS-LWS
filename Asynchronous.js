@@ -23,7 +23,7 @@
 
 
 
-const takeOrder = (customer, callback) => {
+/* const takeOrder = (customer, callback) => {
     console.log(`take order for ${customer}`);
 
     callback(customer);
@@ -52,4 +52,34 @@ takeOrder('customer 1', (customer)=>{
     });
 
 })
-console.log('Hello');
+console.log('Hello'); */
+
+
+
+
+  const hasMeeting = false;
+
+  const meeting = new Promise((resolve, reject) => {
+    if(!hasMeeting){
+        const meetingDetails = {
+            name: 'Technical Meeting',
+            location: 'Google Meet',
+            time: '10:00 PM'
+        };
+
+        resolve(meetingDetails);
+    }else{
+
+        reject(new Error('meeting already ase re pagla'));
+
+    }
+  })
+
+
+  meeting
+    .then((res)=>{
+        console.log(res);
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
