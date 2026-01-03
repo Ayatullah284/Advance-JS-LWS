@@ -77,14 +77,18 @@ console.log(a);
 var language = {
     name: 'JavaScript',
     estd: '1995',
+    libraries: ['React', 'Vue', 'jQuery']
 }
 
 // var language2 = language; // mutabl
 var language2 = {...language}; // immutably
+// var language2 = _.cloneDeep(language); // immutably
 language.founder = 'Brendan Eich';
+language.libraries.push('Angular');
 
 // Immutably = change na kore
 
 console.log(language);
 console.log(language2);
 
+// Lodash npm  
