@@ -14,7 +14,7 @@ a.name = 'Tamim';
  */
 
 
-
+/* 
 var a = ['Sakib', 'Tamim'];
 var b = a;
 
@@ -23,7 +23,7 @@ a.push('Mahmudullah');
 console.log(a);
 console.log(b);
 
-
+ */
 
 
 
@@ -52,3 +52,20 @@ Date
  */
 
 
+
+
+// Mutetion vs Assignment 
+
+var a = ['Sakib', 'Tamim'];
+var b = a;
+
+// a.push('Mahmudullah'); // change/mutate
+a = [];
+
+console.log(a)
+console.log(b)
+
+
+a = {}
+
+console.log(a);
