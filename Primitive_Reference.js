@@ -22,3 +22,33 @@ a.push('Mahmudullah');
 
 console.log(a);
 console.log(b);
+
+
+
+
+
+/* 
+// Primitive value : stack 
+string 
+Number 
+Boolean 
+null 
+undefined 
+Symbol
+ */
+
+
+
+// Reference Values: heap, stack (meutation)
+/* 
+Object 
+Array 
+Function 
+Date 
+. 
+. 
+. 
+. 
+ */
+
+
