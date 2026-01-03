@@ -68,4 +68,99 @@ first();
 
 
 
+/* 
+Ayatullah, JavaScript **Event Loop**–এ কোনটা আগে চলবে এটা খুবই গুরুত্বপূর্ণ। সংক্ষেপে কিন্তু পরিষ্কারভাবে বলছি 👇
 
+---
+
+## 🔁 Event Loop–এর Priority Order (কে আগে চলবে)
+
+### ✅ **১️⃣ Call Stack**
+
+* সবসময় **সবার আগে**
+* যদি stack ফাঁকা না হয় → Event Loop কিছুই চালাবে না
+
+---
+
+### ✅ **২️⃣ Microtask Queue (সবচেয়ে বেশি permission)**
+
+👉 **Microtask Queue সবসময় Callback Queue–এর আগে execute হয়**
+
+**Microtask এর উদাহরণ:**
+
+* `Promise.then()`
+* `Promise.catch()`
+* `Promise.finally()`
+* `queueMicrotask()`
+* `MutationObserver`
+
+📌 নিয়ম:
+
+> Call Stack ফাঁকা হলেই **Microtask Queue পুরোটা শেষ না হওয়া পর্যন্ত** Event Loop আর কিছুতে যাবে না
+
+---
+
+### ✅ **৩️⃣ Callback Queue (Macrotask Queue)**
+
+👉 Microtask শেষ হলে তবেই Callback Queue
+
+**Callback / Macrotask এর উদাহরণ:**
+
+* `setTimeout`
+* `setInterval`
+* `setImmediate`
+* DOM events (`click`, `scroll`)
+* `setTimeout(fn, 0)` ❌ (তবুও microtask এর পরে)
+
+---
+
+## 🔢 Final Priority Flow (মনে রাখার শর্ট ফর্ম)
+
+```
+Call Stack
+   ↓
+Microtask Queue (Promise)
+   ↓
+Callback / Macrotask Queue (setTimeout, event)
+```
+
+---
+
+## 🧪 ছোট Example
+
+```js
+console.log("Start");
+
+setTimeout(() => {
+  console.log("setTimeout");
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log("Promise");
+});
+
+console.log("End");
+```
+
+### 🖨️ Output হবে:
+
+```
+Start
+End
+Promise
+setTimeout
+```
+
+👉 কারণ:
+
+* `Promise` → **Microtask**
+* `setTimeout` → **Callback Queue**
+
+---
+
+## 🧠 এক লাইনে উত্তর (Exam / Interview ready)
+
+> **Microtask Queue সবসময় Callback Queue–এর আগে permission পায় Event Loop–এ।**
+
+চাও তো আমি diagram এঁকে বা animation style এও বুঝিয়ে দিতে পারি 👍
+ */
