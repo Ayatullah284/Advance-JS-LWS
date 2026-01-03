@@ -74,7 +74,7 @@ console.log(a);
 
 
 
-var language = {
+/* var language = {
     name: 'JavaScript',
     estd: '1995',
     libraries: ['React', 'Vue', 'jQuery']
@@ -91,4 +91,21 @@ language.libraries.push('Angular');
 console.log(language);
 console.log(language2);
 
-// Lodash npm  
+// Lodash npm   */
+
+
+
+
+// String, Number, Boolean primitive Wrapper type
+/* 
+var a = new String('Ayatullah');
+var b = new Number(20);
+var c = new Boolean(true);
+
+console.log(a, b, c);
+ */
+
+
+
+// pass by reference / value
+
