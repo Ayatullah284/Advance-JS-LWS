@@ -109,3 +109,21 @@ console.log(a, b, c);
 
 // pass by reference / value
 
+// let a = 1;  
+let a = {
+    num: 1,
+}
+
+let change = (val) => {
+    // pass by value 
+    // val = 2; // assignment
+    // val = {}; // assignment
+
+    // pass by reference 
+    // val.num = 2;
+}
+
+
+change(a); // passed by reference
+
+console.log(a)
