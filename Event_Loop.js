@@ -9,7 +9,7 @@ Event Loop
 
 
 
-const second = () => console.log('I am second');
+/* const second = () => console.log('I am second');
 const third = () => console.log('I am third');
 
 const first = () => {
@@ -19,4 +19,20 @@ const first = () => {
     third();
 };
 
-first();
+first(); */
+
+
+
+
+
+
+function process(num){
+    // process heavy sync task:
+
+    console.log(num);
+}
+
+
+[1, 2, 3, 4, 5].forEach(i => {
+    process(i);
+})
