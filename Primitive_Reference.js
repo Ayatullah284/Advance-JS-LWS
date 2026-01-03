@@ -56,7 +56,7 @@ Date
 
 // Mutetion vs Assignment 
 
-var a = ['Sakib', 'Tamim'];
+/* var a = ['Sakib', 'Tamim'];
 var b = a;
 
 // a.push('Mahmudullah'); // change/mutate
@@ -69,3 +69,22 @@ console.log(b)
 a = {}
 
 console.log(a);
+
+ */
+
+
+
+var language = {
+    name: 'JavaScript',
+    estd: '1995',
+}
+
+// var language2 = language; // mutabl
+var language2 = {...language}; // immutably
+language.founder = 'Brendan Eich';
+
+// Immutably = change na kore
+
+console.log(language);
+console.log(language2);
+
