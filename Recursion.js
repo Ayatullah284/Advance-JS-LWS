@@ -44,4 +44,4 @@ console.log(result);
 1 + 2
 0 + 1
  */
-
+// stack memory 
