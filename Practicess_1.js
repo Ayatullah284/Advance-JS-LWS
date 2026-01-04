@@ -63,3 +63,26 @@ class MyArray extends Array{
 }
 
  */
+
+
+
+// Conditional shorthand 
+
+// bad 
+if(isValid === true){
+    // do something...
+}
+
+if(isValid === false){
+    // do something...
+}
+
+
+// Good
+if(isValid){
+    // do something...
+}
+
+if(!isValid){
+    // do something...
+}
