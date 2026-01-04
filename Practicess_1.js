@@ -29,6 +29,7 @@ createShape(shapeConfig);
 
 
 //Good 
+/* 
 const shapeConfig = {
     type: 'circle',
     width: 150
@@ -44,3 +45,21 @@ function createShape(config){
         config
     );
 }
+ */
+
+
+
+// Prototype pollution 
+// bad 
+/* Array.prototype.myFunction = function myFunction(){
+    //implementation
+};
+
+// Good 
+class MyArray extends Array{
+    myFunc(){
+        // implementation
+    }
+}
+
+ */
