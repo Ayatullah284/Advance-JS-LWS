@@ -389,3 +389,20 @@ const userModule = (() => {
 
 
 
+for(var i = 0; i < someArray.length; i++){
+  var container = document.getElementById('container');
+
+  container.innerHtml += 'my number:' + i;
+  console.log(i);
+}
+
+
+
+
+
+// good 
+var container = document.getElementById('container');
+for(var i = 0; i < someArray.length; i++){
+  container.innerHtml += 'my number:' + i;
+  console.log(i);
+}
