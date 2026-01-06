@@ -138,3 +138,21 @@ xhr.onreadystatechange = function () {
 
 বাংলায় বুঝিয়ে দিতে পারি। বলুন কোনটা চান?
  */
+
+
+
+
+const getButton = document.getElementById('get-button');
+const sendButton = document.getElementById('send-button');
+
+
+const getData = function(){
+    const xhr = new XMLHttpRequest();
+};
+const sendData = function(){
+
+};
+
+
+getButton.addEventListener('click', getButton);
+sendButton.addEventListener('click', sendButton);
