@@ -32,7 +32,7 @@ console.log(symbl1 == symbl2, symbl1 === symbl2) // true */
 
 
 
-var cricket = Symbol.for('This is Cricket Symbol.');
+/* var cricket = Symbol.for('This is Cricket Symbol.');
 var test = 'testetstestes';
 
 var object = {
@@ -43,4 +43,44 @@ var object = {
 
 
 console.log(object);
+
+ */
+
+
+
+// Symbol are invisible 
+
+/* var object = {};
+
+object.name = 'JavaScript';
+object.estd = '1995';
+
+object[Symbol('founder')] = 'Brendan Eich';
+
+console.log(object);
+
+for(let key in object){
+    console.log(key);
+}
+console.log(Object.keys(object)); */
+
+
+
+
+
+
+
+
+
+var includes = Symbol('my on array includes method');
+Array.prototype['includes'] = () => {
+    console.log('Ayatullah includes.');
+}
+
+var myArray = [1, 2, 3];
+
+console.log(myArray.includes(2));
+console.log(myArray["includes"](2));
+
+myArray[includes]
 
