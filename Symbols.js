@@ -72,7 +72,7 @@ console.log(Object.keys(object)); */
 
 
 
-var includes = Symbol('my on array includes method');
+/* var includes = Symbol('my on array includes method');
 Array.prototype['includes'] = () => {
     console.log('Ayatullah includes.');
 }
@@ -84,3 +84,63 @@ console.log(myArray["includes"](2));
 
 myArray[includes]
 
+ */
+
+
+/* 
+var title = 'JavaScript';
+
+// 1. title re new String('JavaScript);
+// 2. convert parameter 'JavaScript' into RegExp
+// 3. RefExp er moddhe Symbol.search() er implementation ashe kina
+
+console.dir(String);
+
+console.log(title.search('Script')) */
+
+
+
+/* class Product{
+    constructor(title){
+        this.title = title;
+    }
+
+    [Symbol.search](string){
+        return string.indexOf(this.title) >= 0 ? 'Found' : 'Not found';
+    }
+}
+
+console.log('javascript'.search('script'));
+var laptop = new Product('laptop');
+console.log('HP laptop'.search(laptop)); */
+
+
+
+
+
+function myFunc(){
+    const PVT = Symbol('my private value');
+
+    return {
+        modify(obj){
+            obj[PVT] = true;
+        },
+
+        output(obj){
+            return obj[PVT];
+        }
+    }
+}
+
+
+
+const value = myFunc();
+const obj = {a: 1, b: 2};
+
+value.modify(obj);
+console.log(value.output(obj));
+
+
+delete obj["Symbol(my private value)"];
+
+console.log(obj);
