@@ -68,7 +68,7 @@ let object = {
 
 
 // console.log(Object.entries(object));
-Object.prototype[Symbol.iterator] = function(){
+/* Object.prototype[Symbol.iterator] = function(){
     const entries = Object.entries(this);
     let count = entries.length;
     let index = 0;
@@ -84,11 +84,33 @@ Object.prototype[Symbol.iterator] = function(){
             return {done: true};
         }
     }
+} */
+
+
+// console.log(Object.entries(object));  [
+/*  
+[
+ ['value1', 1],
+ ['value2', 2],
+ ['value3', 3],
+ ['value4', 4],
+ ['value5', 5]
+]
+
+ */
+
+function *generator(obj){
+    const entries = Object.entries(obj);
+    for(let element of entries){
+        yield element[1];
+    }
 }
 
-for(let element of object){
+const iterator = generator(object);
+
+for(let element of iterator){
     console.log(element);
 }
-console.log([...object]);
+// console.log([...object]);
 
 
