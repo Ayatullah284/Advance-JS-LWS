@@ -136,7 +136,7 @@ console.log(iterator.next());
 
 
 
-function *generator(a, b){
+/* function *generator(a, b){
     let k = yield a + b;
     let m = yield a + b + k;
 
@@ -149,5 +149,62 @@ var gen = generator(10, 20);
 console.log(gen.next());
 console.log(gen.next(50));
 console.log(gen.next(100));
+ */
+
+
+
+
+
+
+
+
+const takeOrder = (customer) => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(`order take from ${customer}`);
+        }, 1000);
+    })
+    
+};
+
+const processOrder = (customer) => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(`order processed for ${customer}`);
+    }, 2000);  
+    })
+    
+};
+
+// [Symbol.asyncIterator]()
+const completeOrder = (customer) => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(`order completed for ${customer}`);
+    }, 1000);  
+    })
+    
+};
+
+
+async function *solution(customer){
+    yield await takeOrder(customer);
+    yield await processOrder(customer);
+    yield await completeOrder(customer);
+}
+
+const gen = solution('Karim');
+
+// gen.next().then(({value}) => console.log(value));
+// gen.next().then(({value}) => console.log(value));
+// gen.next().then(({value}) => console.log(value));
+
+const promises = [gen.next(), gen.next(), gen.next()];
+
+(async function () {
+    for await (let p of promises){
+        console.log(p);
+    }
+})();
 
 
