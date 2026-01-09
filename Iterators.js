@@ -97,7 +97,7 @@ console.log([...'ayatullah']); */
 
 
 
-
+/* 
 function range(start, end, step){
     let current = start;
     return {
@@ -126,6 +126,6 @@ function range(start, end, step){
 
 
 console.log([...range(1, 30, 2)]);
-
+ */
 
 
