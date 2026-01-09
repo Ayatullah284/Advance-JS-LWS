@@ -115,7 +115,7 @@ for(let element of iterator){
 
 
 
-
+/* 
 function *range(start, end, step){
 
     let current = start;
@@ -131,4 +131,23 @@ function *range(start, end, step){
 var iterator = range(1, 1000, 2);
 console.log(iterator.next());
 console.log(iterator.next());
+ */
+
+
+
+
+function *generator(a, b){
+    let k = yield a + b;
+    let m = yield a + b + k;
+
+    yield a + b + k + m;
+}
+
+
+var gen = generator(10, 20);
+
+console.log(gen.next());
+console.log(gen.next(50));
+console.log(gen.next(100));
+
 
