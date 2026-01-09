@@ -30,3 +30,33 @@ for(let i = 0; i < entries.length; i++){
         console.log(element)
     } */
 console.dir(object);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Iterable  Protocol:
+
+// 1. Symbol.iterator  (function) 
+// 2. return an iterator
+
+
+
+let arr = ['M', 'N', 'O'];
+let iterator = arr[Symbol.iterator]();
+
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+
+
