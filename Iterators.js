@@ -60,3 +60,72 @@ console.log(iterator.next());
 console.log(iterator.next());
 
 
+
+
+// Iterator protocol:
+
+// 1. Object
+// 2. next()
+// 3. next() must return an object with done:Boolean and a value
+
+
+
+
+
+
+/* console.log([...'hello']);
+
+String.prototype[Symbol.iterator] = function () {
+    let count = this.length;
+
+    return {
+        next() {
+            if(count > 0){
+                count --;
+                return {done: false, value: 'JS'}
+            }
+            return {done: true};
+        }
+    };
+};
+
+
+console.log([...'ayatullah']); */
+
+
+
+
+
+
+
+function range(start, end, step){
+    let current = start;
+    return {
+        [Symbol.iterator]: function(){
+            return {
+                next(){
+                    let result;
+                    if(current <= end){
+                        result = {
+                            done: false,
+                            value: current
+                        };
+            
+                        current += step;
+                        return result;
+                    }
+                    return {
+                    done: true,
+                    };
+                }
+            }
+        }
+    }
+}
+
+
+
+console.log([...range(1, 30, 2)]);
+
+
+
