@@ -10,7 +10,7 @@ console.log(iterator.next());
  */
 
 
-
+/* 
 function *generator(){
     yield 1;
     yield 2;
@@ -28,5 +28,26 @@ console.log(iterator.next());
 console.log(iterator.next());
 console.log(iterator.next());
 console.log(iterator.next());
+ */
 
 
+
+
+function *myGenerator(){};
+function* myGenerator(){};
+function * myGenerator(){};
+
+
+
+const myGenerator = function* () {};
+
+// let generator = *() => {};  // X not use for arrow funtion
+
+
+class myClass{
+    *myGenerator(){};
+}
+
+const myObject = {
+    *myGenerator(){}
+}
