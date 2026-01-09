@@ -99,7 +99,7 @@ let object = {
 
  */
 
-function *generator(obj){
+/* function *generator(obj){
     const entries = Object.entries(obj);
     for(let element of entries){
         yield element[1];
@@ -110,7 +110,25 @@ const iterator = generator(object);
 
 for(let element of iterator){
     console.log(element);
-}
+} */
 // console.log([...object]);
 
+
+
+
+function *range(start, end, step){
+
+    let current = start;
+
+    while(current <= end){
+        yield current;
+        console.log('did u execute?')
+        current += step;
+    }
+}
+
+
+var iterator = range(1, 1000, 2);
+console.log(iterator.next());
+console.log(iterator.next());
 
