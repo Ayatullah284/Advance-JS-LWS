@@ -56,7 +56,7 @@ console.log(customer1D, customer2D, customer3D, customer4D);
 
 
 // curry converter function:
-function curry (func){
+/* function curry (func){
     return function  curried(...args){
         if(args.length >= func.length){
             return func.apply(this, args);
@@ -68,14 +68,39 @@ function curry (func){
     }
 }
 
+
+*/
+
+
+/* 
 function sum(a, b, c){
     return a + b + c;
 }
 
-let curriedSum = curry(sum);
+let curriedSum = _.curry(sum);
 
 console.log(curriedSum(1, 2, 3));
 console.log(curriedSum(1)(2, 3));
 console.log(curriedSum(1)(2)(3));
+
+ */
+
+
+
+function log(date, importance, message){
+    console.log(
+        `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()} : ${importance} : ${message}`
+    );
+}
+
+
+let curriedLog = _.curry(log);
+
+curriedLog(new Date(), 'Debug', 'some debug');
+curriedLog(new Date(), 'Debug', 'some debug');
+
+let logNow =  curriedLog(new Date());
+logNow('Info', 'info message');
+
 
 
