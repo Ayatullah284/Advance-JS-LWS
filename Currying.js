@@ -27,7 +27,7 @@ console.log(step3);
  */
 
 
-
+/* 
 function discount(discount){
     return (price)=>{
         return price - price * discount;
@@ -47,3 +47,35 @@ console.log(customer1D, customer2D, customer3D, customer4D);
 
 
 // Partial function concept:
+
+ */
+
+
+
+
+
+
+// curry converter function:
+function curry (func){
+    return function  curried(...args){
+        if(args.length >= func.length){
+            return func.apply(this, args);
+        }else{
+            return function(...args2) {
+                return curried.apply(this, args.concat(args2));
+            }
+        }
+    }
+}
+
+function sum(a, b, c){
+    return a + b + c;
+}
+
+let curriedSum = curry(sum);
+
+console.log(curriedSum(1, 2, 3));
+console.log(curriedSum(1)(2, 3));
+console.log(curriedSum(1)(2)(3));
+
+
