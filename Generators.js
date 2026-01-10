@@ -157,7 +157,7 @@ console.log(gen.next(100));
 
 
 
-
+/* 
 const takeOrder = (customer) => {
     return new Promise((resolve) => {
       setTimeout(() => {
@@ -204,6 +204,27 @@ const promises = [gen.next(), gen.next(), gen.next()];
 (async function () {
     for await (let p of promises){
         console.log(p);
+    }
+})();
+
+ */
+
+
+
+
+
+const myAsyncIterable = {
+    async *[Symbol.asyncIterator](){
+        yield 'hello';
+        yield 'async';
+        yield 'iterator';
+    }
+};
+
+
+(async () => {
+    for await (let x of myAsyncIterable){
+        console.log(x);
     }
 })();
 
