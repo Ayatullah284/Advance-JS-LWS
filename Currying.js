@@ -86,7 +86,7 @@ console.log(curriedSum(1)(2)(3));
  */
 
 
-
+/* 
 function log(date, importance, message){
     console.log(
         `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()} : ${importance} : ${message}`
@@ -101,6 +101,16 @@ curriedLog(new Date(), 'Debug', 'some debug');
 
 let logNow =  curriedLog(new Date());
 logNow('Info', 'info message');
+
+
+ */
+
+
+
+
+const multiply = a => b => c => a * b * c;
+
+console.log(multiply(5)(6)(7));
 
 
 
