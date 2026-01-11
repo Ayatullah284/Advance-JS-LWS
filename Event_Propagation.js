@@ -7,12 +7,15 @@ const button = document.getElementById('button');
 
 parent.addEventListener('click', listener, {
     // event capturing or trickling
-    capture: true
+    capture: false
 });
-form.addEventListener('click', listener);
+form.addEventListener('click', listener,true);
 button.addEventListener('click', listener);
 
 function listener(event){
     // console.log(event.currentTarget);
     console.log(this);
 }
+
+
+
