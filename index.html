@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scopes</title>
 
-    <style>
+    <!-- <style>
         button{
             width: 200px;
             height: 50px;
@@ -45,7 +45,7 @@
             transform: scale(1);
             opacity: 1;
         }
-    </style>
+    </style> -->
 
 </head>
 <body>
@@ -89,10 +89,28 @@
 
 
 
-<button id="total">Calculate Total</button>
+<!-- <button id="total">Calculate Total</button>
 <button id="bg">Change Background Color</button>
 
+ -->
 
+<div class="container">
+    <h1>Event Delegation:</h1>
+
+    <div class="languages">
+        <ul id="list">
+            <li>JavaScript</li>
+            <li>PHP</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>TypeScript</li>
+        </ul>
+
+        <div>
+            <button onclick="addElement()">Add element</button>
+        </div>
+    </div>
+</div>
 
 
 
@@ -103,6 +121,6 @@
 
 
 
-    <script src="single_threaded.js"></script>
+    <script src="Event_Delegation.js"></script>
 </body>
 </html>
