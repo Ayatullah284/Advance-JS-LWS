@@ -19,3 +19,4 @@ function listener(event){
 
 
 
+// Bubbling vs Capturing
